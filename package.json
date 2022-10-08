@@ -1,0 +1,48 @@
+{
+  "name": "gruta",
+  "version": "0.1.0",
+  "description": "A simple yet powerful microservice-oriented Node.js backend framework",
+  "main": "dist/cli/index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "build": "tsc --outDir dist",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "cli:dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "lint": "eslint ./src --ext .ts"
+  },
+  "keywords": [
+    "nodejs",
+    "typescript",
+    "framework",
+    "backend",
+    "gruta"
+  ],
+  "author": "Guilherme Tavares",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/express": "^4.17.14",
+    "@types/inquirer": "^9.0.2",
+    "@types/koa": "^2.13.5",
+    "@types/node": "^18.8.1",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.24.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.8.4"
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.{ts,css,md}": "prettier --write"
+  },
+  "dependencies": {
+    "commander": "^9.4.1",
+    "express": "^4.18.1",
+    "fastify": "^4.7.0",
+    "inquirer": "8.0.0",
+    "koa": "^2.13.4"
+  }
+}
